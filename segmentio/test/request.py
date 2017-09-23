@@ -2,7 +2,7 @@ from datetime import datetime, date
 import unittest
 import json
 
-from analytics.request import post, DatetimeSerializer
+from segmentio.request import post, DatetimeSerializer
 
 
 class TestRequests(unittest.TestCase):

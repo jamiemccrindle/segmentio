@@ -7,9 +7,9 @@ import atexit
 from dateutil.tz import tzutc
 from six import string_types
 
-from analytics.utils import guess_timezone, clean
-from analytics.consumer import Consumer
-from analytics.version import VERSION
+from segmentio.utils import guess_timezone, clean
+from segmentio.consumer import Consumer
+from segmentio.version import VERSION
 
 try:
     import queue
@@ -202,7 +202,7 @@ class Client(object):
         msg['timestamp'] = timestamp.isoformat()
         msg['messageId'] = str(uuid4())
         msg['context']['library'] = {
-            'name': 'analytics-python',
+            'name': 'segmentio',
             'version': VERSION
         }
 
@@ -218,7 +218,7 @@ class Client(object):
             self.log.debug('enqueued %s.', msg['type'])
             return True, msg
         except queue.Full:
-            self.log.warn('analytics-python queue is full')
+            self.log.warn('segmentio queue is full')
             return False, msg
 
     def flush(self):

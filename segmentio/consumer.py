@@ -1,8 +1,8 @@
 import logging
 from threading import Thread
 
-from analytics.version import VERSION
-from analytics.request import post
+from segmentio.version import VERSION
+from segmentio.request import post
 
 try:
     from queue import Empty

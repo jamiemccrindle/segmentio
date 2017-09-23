@@ -3,8 +3,8 @@ import unittest
 import time
 import six
 
-from analytics.version import VERSION
-from analytics.client import Client
+from segmentio.version import VERSION
+from segmentio.client import Client
 
 
 class TestClient(unittest.TestCase):
@@ -53,7 +53,7 @@ class TestClient(unittest.TestCase):
         self.assertEqual(msg['event'], 'python test event')
         self.assertEqual(msg['anonymousId'], 'anonymousId')
         self.assertEqual(msg['context']['library'], {
-            'name': 'analytics-python',
+            'name': 'segmentio',
             'version': VERSION
         })
         self.assertTrue(isinstance(msg['messageId'], str))
@@ -87,7 +87,7 @@ class TestClient(unittest.TestCase):
         self.assertEqual(msg['traits'], { 'trait': 'value' })
         self.assertEqual(msg['anonymousId'], 'anonymousId')
         self.assertEqual(msg['context']['library'], {
-            'name': 'analytics-python',
+            'name': 'segmentio',
             'version': VERSION
         })
         self.assertTrue(isinstance(msg['timestamp'], str))
@@ -120,7 +120,7 @@ class TestClient(unittest.TestCase):
         self.assertEqual(msg['traits'], { 'trait': 'value' })
         self.assertEqual(msg['anonymousId'], 'anonymousId')
         self.assertEqual(msg['context']['library'], {
-            'name': 'analytics-python',
+            'name': 'segmentio',
             'version': VERSION
         })
         self.assertTrue(isinstance(msg['timestamp'], str))
@@ -162,7 +162,7 @@ class TestClient(unittest.TestCase):
         self.assertEqual(msg['properties'], { 'property': 'value' })
         self.assertEqual(msg['anonymousId'], 'anonymousId')
         self.assertEqual(msg['context']['library'], {
-            'name': 'analytics-python',
+            'name': 'segmentio',
             'version': VERSION
         })
         self.assertEqual(msg['category'], 'category')
@@ -196,7 +196,7 @@ class TestClient(unittest.TestCase):
         self.assertEqual(msg['properties'], { 'property': 'value' })
         self.assertEqual(msg['anonymousId'], 'anonymousId')
         self.assertEqual(msg['context']['library'], {
-            'name': 'analytics-python',
+            'name': 'segmentio',
             'version': VERSION
         })
         self.assertTrue(isinstance(msg['timestamp'], str))

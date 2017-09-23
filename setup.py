@@ -7,18 +7,18 @@ try:
 except ImportError:
     from distutils.core import setup
 
-# Don't import analytics-python module here, since deps may not be installed
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'analytics'))
+# Don't import segmentio module here, since deps may not be installed
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'segmentio'))
 from version import VERSION
 
 long_description = '''
-Segment is the simplest way to integrate analytics into your application.
-One API allows you to turn on any other analytics service. No more learning
+Segment is the simplest way to integrate segmentio into your application.
+One API allows you to turn on any other segmentio service. No more learning
 new APIs, repeated code, and wasted development time.
 
 This is the official python client that wraps the Segment REST API (https://segment.com).
 
-Documentation and more details at https://github.com/segmentio/analytics-python
+Documentation and more details at https://github.com/jamiemccrindle/segmentio
 '''
 
 install_requires = [
@@ -28,15 +28,15 @@ install_requires = [
 ]
 
 setup(
-    name='analytics-python',
+    name='segmentio',
     version=VERSION,
-    url='https://github.com/segmentio/analytics-python',
+    url='https://github.com/jamiemccrindle/segmentio',
     author='Segment',
     author_email='friends@segment.com',
     maintainer='Segment',
     maintainer_email='friends@segment.com',
-    test_suite='analytics.test.all',
-    packages=['analytics', 'analytics.test'],
+    test_suite='segmentio.test.all',
+    packages=['segmentio', 'segmentio.test'],
     license='MIT License',
     install_requires=install_requires,
     description='The hassle-free way to integrate analytics into any python application.',

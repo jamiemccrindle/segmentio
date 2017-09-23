@@ -6,7 +6,7 @@ import json
 from requests.auth import HTTPBasicAuth
 from requests import sessions
 
-from analytics.utils import remove_trailing_slash
+from segmentio.utils import remove_trailing_slash
 
 _session = sessions.Session()
 
