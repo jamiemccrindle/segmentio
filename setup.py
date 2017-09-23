@@ -16,9 +16,13 @@ Segment is the simplest way to integrate segmentio into your application.
 One API allows you to turn on any other segmentio service. No more learning
 new APIs, repeated code, and wasted development time.
 
-This is the official python client that wraps the Segment REST API (https://segment.com).
+This is a copy of the official library that renames the analytics module
+segmentio.
 
-Documentation and more details at https://github.com/jamiemccrindle/segmentio
+This client wraps the the Segment REST API (https://segment.com).
+
+Documentation and more details at https://github.com/jamiemccrindle/segmentio and
+https://github.com/segmentio/analytics-python
 '''
 
 install_requires = [
@@ -31,10 +35,10 @@ setup(
     name='segmentio',
     version=VERSION,
     url='https://github.com/jamiemccrindle/segmentio',
-    author='Segment',
-    author_email='friends@segment.com',
+    author='Not Segment',
+    author_email='jamiemccrindle@gmail.com',
     maintainer='Segment',
-    maintainer_email='friends@segment.com',
+    maintainer_email='jamiemccrindle@gmail.com',
     test_suite='segmentio.test.all',
     packages=['segmentio', 'segmentio.test'],
     license='MIT License',

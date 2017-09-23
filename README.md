@@ -1,9 +1,8 @@
-﻿analytics-python
+﻿segmentio
 ==============
 
-[![Build Status](https://travis-ci.org/segmentio/analytics-python.svg?branch=master)](https://travis-ci.org/segmentio/analytics-python)
-
-analytics-python is a python client for [Segment](https://segment.com)
+segmentio is a python client for [Segment](https://segment.com). It renames the analytics module
+segmentio, otherwise it's an exact copy of [https://github.com/segmentio/analytics-python](https://github.com/segmentio/analytics-python)
 
 ## Documentation
 
